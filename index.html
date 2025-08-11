@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container-fluid" style="padding: 0%;">
+      <nav
+        class="navbar bg-light d-flex justify-content-between align-items-center"
+      >
+        <!-- Brand -->
+        <a class="navbar-brand" href="#" style="margin-left: 5px;">
+          <i
+            class="fa-brands fa-instagram"
+            style="font-size: 24px; vertical-align: middle"
+          ></i>
+          <span
+            style="
+              font-weight: 500;
+              vertical-align: text-top;
+              margin-left: -5px;
+              margin-right: 1140px;
+            "
+            >Instagram</span
+          >
+        </a>
+
+        <!-- Center: Create Post Button -->
+        <button
+          type="button"
+          class="btn btn-success"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Create a new post
+        </button>
+
+        <!-- Right: Dropdown -->
+        <div class="dropdown ms-auto" style="margin-right: 10px;">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-gear"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-light">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Accessibility</a></li>
+            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" href="#" style="color: red">Log out</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  Create a new post
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <form>
+                <div class="mb-3" style="margin: 15px">
+                  <label for="message-text" class="col-form-label"
+                    >Caption:</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="message-text"
+                    placeholder="Add the caption of your post here"
+                  ></textarea>
+                  <div style="margin-top: 2%">
+                    <button type="button" class="btn btn-light">
+                      <i class="fa-solid fa-camera"></i>
+                    </button>
+                    <button type="button" class="btn btn-light">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-success">Publish</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div>
+        <ul
+          class="nav nav-tabs justify-content-center"
+          id="myTab"
+          role="tablist"
+          style="border: none"
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="home-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#home-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="home-tab-pane"
+              aria-selected="true"
+              style="border: none"
+            >
+              <i class="fa-solid fa-table-cells"></i>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="profile-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#profile-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="profile-tab-pane"
+              aria-selected="false"
+              style="border: none"
+            >
+              <i class="fa-solid fa-square"></i>
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="home-tab-pane"
+            role="tabpanel"
+            aria-labelledby="home-tab"
+            tabindex="0"
+          >
+            <div class="row g-2">
+              <div class="col-4">
+                <img
+                  src="https://cdn.ehorses.media/image/blur/big/pre-caballo-castrado-6anos-161-cm-tordo-caballos-de-completo-navas-del-madrono_f90789a6-c696-4e4e-9cd7-5904a5f830a6.jpg"
+                  class="img-fluid custom-img"
+                  alt="..."
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  src="https://cdn.ehorses.media/image/xxl/hannoveriano-caballo-castrado-6anos-168-cm-tordo-caballos-de-salto-riedstadt_07135881-669a-4462-bc91-191c6d1d76f1.jpg"
+                  class="img-fluid custom-img"
+                  alt="..."
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  src="https://cdn.ehorses.media/image/xxl/pre-semental-8anos-168-cm-tordo-caballos-de-completo-navas-del-madrono_5acf5c43-9f6a-455a-bf6f-576277efbf22.jpg"
+                  class="img-fluid custom-img"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <div class="row g-2">
+              <div class="col-4">
+                <img
+                  src="https://cdn.ehorses.media/image/blur/xxldetails/warmblood-checo-yegua-6anos-175-cm-alazan-tostado-caballos-de-salto-bohumin-zablati_374a3505-827e-4ad0-97a8-b893b2015ca1.jpg"
+                  class="img-fluid custom-img"
+                  alt="..."
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  src="https://iberianhorses.es/wp-content/uploads/2024/02/CHESTNUT-PRE-HORSE-FOR-SALE-3.jpg"
+                  class="img-fluid custom-img"
+                  alt="..."
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  src="https://cdn.ehorses.media/image/blur/big/b298f924-afd0-42cb-a080-e23c91bedff8.jpg"
+                  class="img-fluid custom-img"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <div class="row g-2">
+              <div class="col-4">
+                <img
+                  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMGijXXziOj7nA8xYu4xnzDTbm61iyDh3n2rRq0QJEdzP-1KnQF_36x-x7U0jTV4cGhGzWE7yQCxxf2UGQRnZbeeDvfBJ1h5avDC9HBRQu74PPcf5x37PW65xCCttuXpM0f5hn9_FYAuc/s1600/Frisones+3.JPG"
+                  class="img-fluid custom-img"
+                  alt="..."
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  src="https://www.razas-caballos.com/Imagenes/caballos-de-raza-frison.jpg"
+                  class="img-fluid custom-img"
+                  alt="..."
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  src="https://i0.wp.com/www.heukerbv.com/wp-content/uploads/2018/01/djoerd473-website3.jpg?fit=1200%2C800&ssl=1"
+                  class="img-fluid custom-img"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="profile-tab-pane"
+            role="tabpanel"
+            aria-labelledby="profile-tab"
+            tabindex="0"
+          >
+            <div class="row flex-column justify-content-center align-items-center">
+              <div class="card" style="width: 25rem; padding: 0%; margin-bottom: 25px;">
+                <div class="card-header d-flex justify-content-between align-items-center" style="padding-left: 2%; padding-right: 2%;">Pegaso
+                  <p style="font-size: small; color: #666; margin-bottom: 5px">01/12</p>
+                </div>
+                <div class="card-body" style="padding: 0; margin: 0;">
+                  <img src="https://cdn.ehorses.media/image/blur/big/pre-caballo-castrado-6anos-161-cm-tordo-caballos-de-completo-navas-del-madrono_f90789a6-c696-4e4e-9cd7-5904a5f830a6.jpg" class="card-img" alt="..." />
+                </div>
+                <div class="card-footer text-body" style="padding-left: 2%; font-size: small;"><strong>354 Likes</strong>
+                  <p>Un día más disfrutando junto a mi caballo.</p>
+                </div>
+              </div>
+              <div class="card" style="width: 25rem; padding: 0%; margin-bottom: 25px;">
+                <div class="card-header d-flex justify-content-between align-items-center" style="padding-left: 2%; padding-right: 2%;">Pegaso
+                  <p style="font-size: small; color: #666; margin-bottom: 5px">02/13</p>
+                </div>
+                <div class="card-body" style="padding: 0; margin: 0;">
+                  <img src="https://cdn.ehorses.media/image/xxl/hannoveriano-caballo-castrado-6anos-168-cm-tordo-caballos-de-salto-riedstadt_07135881-669a-4462-bc91-191c6d1d76f1.jpg" class="card-img" alt="..." />
+                </div>
+                <div class="card-footer text-body" style="padding-left: 2%; font-size: small;"><strong>456 Likes</strong>
+                  <p>Belleza y nobleza en cada paso.</p>
+                </div>
+              </div>
+              <div class="card" style="width: 25rem; padding: 0%; margin-bottom: 25px;">
+                <div class="card-header d-flex justify-content-between align-items-center" style="padding-left: 2%; padding-right: 2%;">Pegaso
+                  <p style="font-size: small; color: #666; margin-bottom: 5px">03/14</p>
+                </div>
+                <div class="card-body" style="padding: 0; margin: 0;">
+                  <img src="https://cdn.ehorses.media/image/xxl/pre-semental-8anos-168-cm-tordo-caballos-de-completo-navas-del-madrono_5acf5c43-9f6a-455a-bf6f-576277efbf22.jpg" class="card-img" alt="..." />
+                </div>
+                <div class="card-footer text-body" style="padding-left: 2%; font-size: small;"><strong>769 Likes</strong>
+                  <p>Orgulloso de este gran compañero.</p>
+                </div>
+              </div>
+              <div class="card" style="width: 25rem; padding: 0%; margin-bottom: 25px;">
+                <div class="card-header d-flex justify-content-between align-items-center" style="padding-left: 2%; padding-right: 2%;">Ares
+                  <p style="font-size: small; color: #666; margin-bottom: 5px">04/15</p>
+                </div>
+                <div class="card-body" style="padding: 0; margin: 0;">
+                  <img src="https://cdn.ehorses.media/image/blur/xxldetails/warmblood-checo-yegua-6anos-175-cm-alazan-tostado-caballos-de-salto-bohumin-zablati_374a3505-827e-4ad0-97a8-b893b2015ca1.jpg" class="card-img" alt="..." />
+                </div>
+                <div class="card-footer text-body" style="padding-left: 2%; font-size: small;"><strong>698 Likes</strong>
+                  <p>Momentos que valen oro.</p>
+                </div>
+              </div>
+              <div class="card" style="width: 25rem; padding: 0%; margin-bottom: 25px;">
+                <div class="card-header d-flex justify-content-between align-items-center" style="padding-left: 2%; padding-right: 2%;">Ares
+                  <p style="font-size: small; color: #666; margin-bottom: 5px">05/16</p>
+                </div>
+                <div class="card-body" style="padding: 0; margin: 0;">
+                  <img src="https://iberianhorses.es/wp-content/uploads/2024/02/CHESTNUT-PRE-HORSE-FOR-SALE-3.jpg" class="card-img" alt="..." />
+                </div>
+                <div class="card-footer text-body" style="padding-left: 2%; font-size: small;"><strong>245 Likes</strong>
+                  <p>Siempre a mi lado, en cada camino.</p>
+                </div>
+              </div>
+              <div class="card" style="width: 25rem; padding: 0%; margin-bottom: 25px;">
+                <div class="card-header d-flex justify-content-between align-items-center" style="padding-left: 2%; padding-right: 2%;">Ares
+                  <p style="font-size: small; color: #666; margin-bottom: 5px">06/17</p>
+                </div>
+                <div class="card-body" style="padding: 0; margin: 0;">
+                  <img src="https://cdn.ehorses.media/image/blur/big/b298f924-afd0-42cb-a080-e23c91bedff8.jpg" class="card-img" alt="..." />
+                </div>
+                <div class="card-footer text-body" style="padding-left: 2%; font-size: small;"><strong>799 Likes</strong>
+                  <p>Libertad sobre cuatro patas.</p>
+                </div>
+              </div>
+              <div class="card" style="width: 25rem; padding: 0%; margin-bottom: 25px;">
+                <div class="card-header d-flex justify-content-between align-items-center" style="padding-left: 2%; padding-right: 2%;">Nyx
+                  <p style="font-size: small; color: #666; margin-bottom: 5px">07/18</p>
+                </div>
+                <div class="card-body" style="padding: 0; margin: 0;">
+                  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMGijXXziOj7nA8xYu4xnzDTbm61iyDh3n2rRq0QJEdzP-1KnQF_36x-x7U0jTV4cGhGzWE7yQCxxf2UGQRnZbeeDvfBJ1h5avDC9HBRQu74PPcf5x37PW65xCCttuXpM0f5hn9_FYAuc/s1600/Frisones+3.JPG" class="card-img" alt="..." />
+                </div>
+                <div class="card-footer text-body" style="padding-left: 2%; font-size: small;"><strong>989 Likes</strong>
+                  <p>Días perfectos para estar con él.</p>
+                </div>
+              </div>
+              <div class="card" style="width: 25rem; padding: 0%; margin-bottom: 25px;">
+                <div class="card-header d-flex justify-content-between align-items-center" style="padding-left: 2%; padding-right: 2%;">Nyx
+                  <p style="font-size: small; color: #666; margin-bottom: 5px">08/19</p>
+                </div>
+                <div class="card-body" style="padding: 0; margin: 0;">
+                  <img src="https://www.razas-caballos.com/Imagenes/caballos-de-raza-frison.jpg" class="card-img" alt="..." />
+                </div>
+                <div class="card-footer text-body" style="padding-left: 2%; font-size: small;"><strong>557 Likes</strong>
+                  <p>La elegancia hecha caballo.</p>
+                </div>
+              </div>
+              <div class="card" style="width: 25rem; padding: 0%; margin-bottom: 25px;">
+                <div class="card-header d-flex justify-content-between align-items-center" style="padding-left: 2%; padding-right: 2%;">Nyx
+                  <p style="font-size: small; color: #666; margin-bottom: 5px">09/20</p>
+                </div>
+                <div class="card-body" style="padding: 0; margin: 0;">
+                  <img src="https://i0.wp.com/www.heukerbv.com/wp-content/uploads/2018/01/djoerd473-website3.jpg?fit=1200%2C800&ssl=1" class="card-img" alt="..." />
+                </div>
+                <div class="card-footer text-body" style="padding-left: 2%; font-size: small;"><strong>697 Likes</strong>
+                  <p>Mi fiel amigo, hoy y siempre.</p>
+                </div>
+              </div>
+            </div>
+            ...
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+      integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
